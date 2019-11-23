@@ -129,7 +129,8 @@ information can be specified in the \css} {\attributeshort{style} and
  metadata    &   & xml:id, class, style        & -- & \llquote{MDelt}*\\\hline
  ref         & xref & xml:id, type, class, style             & -- &     \\\hline
  ignore      &      & xml:id, type, comment                  & -- & ANY\\\hline
- index     &      & xml:id                  & -- & EMPTY\\\hline
+  index     &      & xml:id                  & -- & EMPTY\\\hline
+  namespace & uri & name & --  & EMPTY \\\hline
  bibliography    & files  & xml:id                  & -- & EMPTY\\\hline
  \multicolumn{5}{|p{11cm}|}{where \llquote{top-level} stands for top-level \omdoc elements, and
    \llquote{MDelt} for those introduced in \mychapref{metadata}}\\\hline
@@ -173,6 +174,13 @@ information can be specified in the \css} {\attributeshort{style} and
     generalize for glossary, symbol index,...}
 \end{tsection}
 \end{newpart}
+
+\begin{tesction}[id=namespace]{Namespaces}
+  We adopt the system of \textbf{namespaces} of MMT~\cite{MMT:namespaces:on}: the
+  \eldef{namespace} macro declares a namespace URI. If the optional argument is given,
+  then this is a namespace abbreviation declaration, which can be used later to reference
+  theories/modules from other namespaces.\ednote{MK; maybe better use XML namespaces?}
+\end{tesction}
 
 \begin{tsection}[id=metadata]{Metadata}
   
